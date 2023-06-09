@@ -19,3 +19,4 @@ int main() {
     printf("Area da circunferencia: %.2f\n", area);
 
     return 0;
+}
