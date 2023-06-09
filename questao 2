@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int numero, antecessor, sucessor;
+
+    // Entrada do número
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &numero);
+
+    // Processamento
+    antecessor = numero - 1;
+    sucessor = numero + 1;
+
+    // Saída
+    printf("O antecessor de %d eh: %d\n", numero, antecessor);
+    printf("O sucessor de %d eh: %d\n", numero, sucessor);
+
+    return 0;
+}
