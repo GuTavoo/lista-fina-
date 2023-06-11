@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int idade;
+
+    // Entrada da idade
+    printf("Digite a idade: ");
+    scanf("%d", &idade);
+
+    // Verificação da idade para doação de sangue
+    if (idade >= 18 && idade <= 67) {
+        printf("Pode doar sangue.\n");
+    } else {
+        printf("Não pode doar sangue.\n");
+    }
+
+    return 0;
+}
