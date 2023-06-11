@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float numero1, numero2;
+
+    // Entrada dos números
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &numero1);
+
+    printf("Digite o segundo numero: ");
+    scanf("%f", &numero2);
+
+    // Processamento e Saída
+    float soma = numero1 + numero2;
+    printf("a. A soma dos numeros: %.2f\n", soma);
+
+    float produto = numero1 * pow(numero2, 2);
+    printf("b. O produto do primeiro numero pelo quadrado do segundo: %.2f\n", produto);
+
+    float quadrado1 = pow(numero1, 2);
+    printf("c. O quadrado do primeiro numero: %.2f\n", quadrado1);
+
+    float quadrado2 = pow(numero2, 2);
+    float raiz = sqrt(quadrado1 + quadrado2);
+    printf("d. A raiz quadrada da soma dos quadrados: %.2f\n", raiz);
+
+    float diferenca = numero1 - numero2;
+    float seno = sin(diferenca);
+    printf("e. O seno da diferenca do primeiro numero pelo segundo: %.2f\n", seno);
+
+    return 0;
+}
