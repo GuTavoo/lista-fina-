@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    char nome[50];
+
+    // Entrada do nome
+    printf("Digite o nome: ");
+    scanf("%s", nome);
+
+    // Processamento e Saída
+    printf("As 4 primeiras letras do nome: %.4s\n", nome);
+
+    return 0;
+}
