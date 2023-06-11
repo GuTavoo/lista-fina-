@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int tamanhoLado;
+
+    do {
+        printf("Digite o tamanho do lado do quadrado (entre 1 e 20): ");
+        scanf("%d", &tamanhoLado);
+    } while (tamanhoLado < 1 || tamanhoLado > 20);
+
+    for (int i = 0; i < tamanhoLado; i++) {
+        for (int j = 0; j < tamanhoLado; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
