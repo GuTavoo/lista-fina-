@@ -1,26 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    float valorHoraAula, salarioBruto, salarioLiquido;
-    int numeroAulas;
-    float descontoINSS;
+    int numeroDecimal;
 
-    // Entrada dos valores
-    printf("Digite o valor da hora-aula: ");
-    scanf("%f", &valorHoraAula);
+    // Entrada do número decimal
+    printf("Digite um número decimal: ");
+    scanf("%d", &numeroDecimal);
 
-    printf("Digite o número de aulas dadas: ");
-    scanf("%d", &numeroAulas);
+    // Saída do número em hexadecimal
+    printf("O número em hexadecimal: 0x%X\n", numeroDecimal);
 
-    printf("Digite a porcentagem de desconto do INSS: ");
-    scanf("%f", &descontoINSS);
-
-    // Cálculo do salário bruto e líquido
-    salarioBruto = valorHoraAula * numeroAulas;
-    salarioLiquido = salarioBruto - (salarioBruto * (descontoINSS / 100));
-
-    // Saída do salário líquido
-    printf("O salário líquido do professor é: R$ %.2f\n", salarioLiquido);
+    // Saída do número em octal
+    printf("O número em octal: 0%o\n", numeroDecimal);
 
     return 0;
 }
