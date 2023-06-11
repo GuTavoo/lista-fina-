@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    float tempoViagem, velocidadeMedia, distanciaPercorrida;
+
+    // Entrada do tempo de viagem e velocidade média
+    printf("Digite o tempo de viagem (em horas): ");
+    scanf("%f", &tempoViagem);
+
+    printf("Digite a velocidade média (em km/h): ");
+    scanf("%f", &velocidadeMedia);
+
+    // Cálculo da distância percorrida
+    distanciaPercorrida = tempoViagem * velocidadeMedia;
+
+    // Saída da distância percorrida
+    printf("A distância percorrida é: %.2f km\n", distanciaPercorrida);
+
+    return 0;
+}
