@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+int main() {
+    float notas[5][4];
+    float mediaAluno[5];
+    float mediaTurma = 0;
+
+    int i = 0;
+    do {
+        printf("Digite as 4 notas do aluno %d:\n", i + 1);
+        
+        float somaPesos = 0;
+        float somaNotas = 0;
+        
+        int j = 0;
+        do {
+            printf("Nota %d: ", j + 1);
+            scanf("%f", &notas[i][j]);
+            
+            if (j == 0)
+                somaNotas += notas[i][j] * 3;
+            else if (j == 1)
+                somaNotas += notas[i][j] * 2;
+            else
+                somaNotas += notas[i][j];
+            
+            somaPesos += (j == 0) ? 3 : ((j == 1) ? 2 : 1);
+            
+            j++;
+        } while (j < 4);
+        
+        mediaAluno[i] = somaNotas / somaPesos;
+        mediaTurma += mediaAluno[i];
+        
+        i++;
+    } while (i < 5);
+    
+    mediaTurma /= 5;
+    
+    printf("\nResultados:\n");
+    
+    i = 0;
+    do {
+        printf("Aluno %d - Média: %.2f - ", i + 1, mediaAluno[i]);
+        
+        if (mediaAluno[i] >= 7.0)
+            printf("Aprovado\n");
+        else if (mediaAluno[i] < 4.0)
+            printf("Reprovado\n");
+        else {
+            float pontosFaltantes = 7.0 - mediaAluno[i];
+            printf("Recuperação - Pontos necessários: %.2f\n", pontosFaltantes);
+        }
+        
+        i++;
+    } while (i < 5);
+    
+    printf("\nMédia da turma: %.2f\n", mediaTurma);
+    
+    return 0;
+}
