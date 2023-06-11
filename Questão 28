@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+int main() {
+    int idade, faixa1 = 0, faixa2 = 0, faixa3 = 0, faixa4 = 0;
+    float peso, soma1 = 0, soma2 = 0, soma3 = 0, soma4 = 0;
+    int contador = 0;
+
+    do {
+        printf("Digite a idade da pessoa %d: ", contador + 1);
+        scanf("%d", &idade);
+
+        if (idade > 0 && idade <= 10) {
+            printf("Digite o peso da pessoa %d: ", contador + 1);
+            scanf("%f", &peso);
+            soma1 += peso;
+            faixa1++;
+        } else if (idade >= 11 && idade <= 20) {
+            printf("Digite o peso da pessoa %d: ", contador + 1);
+            scanf("%f", &peso);
+            soma2 += peso;
+            faixa2++;
+        } else if (idade >= 21 && idade <= 30) {
+            printf("Digite o peso da pessoa %d: ", contador + 1);
+            scanf("%f", &peso);
+            soma3 += peso;
+            faixa3++;
+        } else if (idade > 30) {
+            printf("Digite o peso da pessoa %d: ", contador + 1);
+            scanf("%f", &peso);
+            soma4 += peso;
+            faixa4++;
+        } else {
+            printf("Idade inválida!\n");
+            continue;
+        }
+
+        contador++;
+    } while (contador < 15);
+
+    if (faixa1 > 0) {
+        float media1 = soma1 / faixa1;
+        printf("Média de peso para a faixa etária de 1 a 10 anos: %.2f\n", media1);
+        printf("Quantidade de pessoas na faixa etária de 1 a 10 anos: %d\n", faixa1);
+    }
+    if (faixa2 > 0) {
+        float media2 = soma2 / faixa2;
+        printf("Média de peso para a faixa etária de 11 a 20 anos: %.2f\n", media2);
+        printf("Quantidade de pessoas na faixa etária de 11 a 20 anos: %d\n", faixa2);
+    }
+    if (faixa3 > 0) {
+        float media3 = soma3 / faixa3;
+        printf("Média de peso para a faixa etária de 21 a 30 anos: %.2f\n", media3);
+        printf("Quantidade de pessoas na faixa etária de 21 a 30 anos: %d\n", faixa3);
+    }
+    if (faixa4 > 0) {
+        float media4 = soma4 / faixa4;
+        printf("Média de peso para a faixa etária acima de 30 anos: %.2f\n", media4);
+        printf("Quantidade de pessoas na faixa etária acima de 30 anos: %d\n", faixa4);
+    }
+
+    return 0;
+}
