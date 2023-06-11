@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int dia, mes, ano;
+
+    printf("Digite o dia do aniversário: ");
+    scanf("%d", &dia);
+
+    printf("Digite o mês do aniversário: ");
+    scanf("%d", &mes);
+
+    printf("Digite o ano do aniversário: ");
+    scanf("%d", &ano);
+
+    // Verificar se a data é válida
+    if (ano == 2023 && mes >= 1 && mes <= 12 && dia >= 1 && dia <= 31) {
+        printf("Data válida.\n");
+    } else {
+        printf("Data inválida.\n");
+    }
+
+    return 0;
+}
