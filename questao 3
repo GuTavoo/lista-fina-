@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    float metros, decimetros, centimetros, milimetros;
+
+    // Entrada do valor em metros
+    printf("Digite um valor em metros: ");
+    scanf("%f", &metros);
+
+    // Processamento
+    decimetros = metros * 10;
+    centimetros = metros * 100;
+    milimetros = metros * 1000;
+
+    // Saída
+    printf("%.2f metros equivalem a %.2f decimetros\n", metros, decimetros);
+    printf("%.2f metros equivalem a %.2f centimetros\n", metros, centimetros);
+    printf("%.2f metros equivalem a %.2f milimetros\n", metros, milimetros);
+
+    return 0;
+}
